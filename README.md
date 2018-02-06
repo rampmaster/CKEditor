@@ -3,7 +3,7 @@ Symfony 4 CKEditor Bundle
 
 Version
 -------
-0.0.00
+0.0.02
 
 Development ONLY
 ----------------
@@ -32,7 +32,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require hillrange/CKEditor "~0"
+$ composer require hillrange/ckeditor ^0.0
 ```
 
 This command requires you to have Composer installed globally, as explained
