@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": "^7.1.3",
+        "egeloen/json-builder": "^2.0|^3.0",
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
         "symfony/validator": "^4.0"
