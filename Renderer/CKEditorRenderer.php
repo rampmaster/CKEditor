@@ -11,7 +11,7 @@
 
 namespace Hillrange\CKEditor\Renderer;
 
-use Ivory\JsonBuilder\JsonBuilder;
+use Hillrange\JsonBuilder\Util\JsonBuilder;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
