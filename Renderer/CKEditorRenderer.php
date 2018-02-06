@@ -11,7 +11,7 @@
 
 namespace Hillrange\CKEditor\Renderer;
 
-use Hillrange\JsonBuilder\Util\JsonBuilder;
+use Hillrange\Jsonbuilder\Util\JSONBuilder;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,12 +29,18 @@ class CKEditorRenderer implements CKEditorRendererInterface
      */
     private $container;
 
+	/**
+	 * @var Jsonbuilder
+	 */
+    private $jsonBuilder;
+
     /**
      * @param ContainerInterface $container
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(ContainerInterface $container, Jsonbuilder $jsonBuilder)
     {
         $this->container = $container;
+	    $this->jsonBuilder = $jsonBuilder;
     }
 
     /**
@@ -299,11 +305,11 @@ class CKEditorRenderer implements CKEditorRendererInterface
     }
 
     /**
-     * @return JsonBuilder
+     * @return JSONBuilder
      */
-    private function getJsonBuilder()
+    private function getJsonBuilder(): JSONBuilder
     {
-        return $this->container->get(JsonBuilder::class);
+        return $this->jsonBuilder;
     }
 
     /**
