@@ -41,7 +41,7 @@
     "extra": {
         "branch-alias": {
             "dev-master": "0.0.x-dev",
-            "0.0.02": "0.0.02"
+            "0.0.02": "0.0.02-dev"
         },
         "symfony": {
             "allow-contrib": "true"
