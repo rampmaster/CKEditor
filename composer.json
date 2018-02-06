@@ -30,7 +30,7 @@
             "Hillrange\\CKEditor\\": "/"
         },
         "exclude-from-classmap": [
-            "/Tests/"
+            "/tests/"
         ]
     },
     "autoload-dev": {
