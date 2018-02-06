@@ -30,14 +30,14 @@ class CKEditorRenderer implements CKEditorRendererInterface
     private $container;
 
 	/**
-	 * @var Jsonbuilder
+	 * @var JSONBuilder
 	 */
     private $jsonBuilder;
 
     /**
      * @param ContainerInterface $container
      */
-    public function __construct(ContainerInterface $container, Jsonbuilder $jsonBuilder)
+    public function __construct(ContainerInterface $container, JSONBuilder $jsonBuilder)
     {
         $this->container = $container;
 	    $this->jsonBuilder = $jsonBuilder;
