@@ -11,6 +11,7 @@
 
 namespace Hillrange\CKEditor\Twig;
 
+use Hillrange\CKEditor\Renderer\CKEditorRenderer;
 use Hillrange\CKEditor\Renderer\CKEditorRendererInterface;
 
 /**
@@ -26,7 +27,7 @@ class CKEditorExtension extends \Twig_Extension implements CKEditorRendererInter
     /**
      * @param CKEditorRendererInterface $renderer
      */
-    public function __construct(CKEditorRendererInterface $renderer)
+    public function __construct(CKEditorRenderer $renderer)
     {
         $this->renderer = $renderer;
     }

@@ -303,7 +303,7 @@ class CKEditorRenderer implements CKEditorRendererInterface
      */
     private function getJsonBuilder()
     {
-        return $this->container->get('ivory_ck_editor.renderer.json_builder');
+        return $this->container->get(JsonBuilder::class);
     }
 
     /**
