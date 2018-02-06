@@ -20,12 +20,12 @@ use Hillrange\CKEditor\Renderer\CKEditorRendererInterface;
 class CKEditorExtension extends \Twig_Extension implements CKEditorRendererInterface
 {
     /**
-     * @var CKEditorRendererInterface
+     * @var CKEditorRenderer
      */
     private $renderer;
 
     /**
-     * @param CKEditorRendererInterface $renderer
+     * @param CKEditorRenderer $renderer
      */
     public function __construct(CKEditorRenderer $renderer)
     {
@@ -111,6 +111,6 @@ class CKEditorExtension extends \Twig_Extension implements CKEditorRendererInter
      */
     public function getName()
     {
-        return 'ivory_ckeditor';
+        return 'hillrange_ckeditor';
     }
 }

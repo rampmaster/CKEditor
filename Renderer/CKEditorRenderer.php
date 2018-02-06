@@ -11,7 +11,7 @@
 
 namespace Hillrange\CKEditor\Renderer;
 
-use Hillrange\JSONBuilder\Util\JSONBuilder;
+use Hillrange\CKEditor\Util\JSONBuilder;
 use Symfony\Component\Asset\Packages;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,12 +28,19 @@ class CKEditorRenderer implements CKEditorRendererInterface
      * @var ContainerInterface
      */
     private $container;
+
+	/**
+	 * @var JSONBuilder
+	 */
+    private $jsonBuilder;
+
     /**
      * @param ContainerInterface $container
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(ContainerInterface $container, JSONBuilder $jsonBuilder)
     {
         $this->container = $container;
+	    $this->jsonBuilder = $jsonBuilder;
     }
 
     /**
@@ -79,7 +86,7 @@ class CKEditorRenderer implements CKEditorRendererInterface
         );
 
         if (isset($options['input_sync']) && $options['input_sync']) {
-            $variable = 'ivory_ckeditor_'.$id;
+            $variable = 'hillrange_ckeditor_'.$id;
             $widget = 'var '.$variable.' = '.$widget."\n";
 
             return $autoInline.$widget.$variable.'.on(\'change\', function() { '.$variable.'.updateElement(); });';
@@ -302,7 +309,7 @@ class CKEditorRenderer implements CKEditorRendererInterface
      */
     private function getJsonBuilder(): JSONBuilder
     {
-        return $this->container->get('hillrange.json_builder.util.json_builder');
+        return $this->jsonBuilder;
     }
 
     /**
