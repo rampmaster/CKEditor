@@ -18,9 +18,9 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "hillrange/json-builder": "dev-master",
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
+        "symfony/property-access": "^4.0",
         "symfony/validator": "^4.0"
     },
     "require-dev": {
