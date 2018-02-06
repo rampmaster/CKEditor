@@ -302,7 +302,7 @@ class CKEditorRenderer implements CKEditorRendererInterface
      */
     private function getJsonBuilder(): JSONBuilder
     {
-        return $this->container->get(JSONBuilder::class);
+        return $this->container->get('hillrange.json_builder.util.json_builder');
     }
 
     /**
