@@ -18,6 +18,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * @author GeLo <geloen.eric@gmail.com>
+ *
+ * Modified by Craig RAYNER <craig@craigrayner.com>
+ *
  */
 class CKEditorInstaller
 {
