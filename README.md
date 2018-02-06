@@ -3,7 +3,7 @@ Provides a CKEditor integration for your Symfony4 Project.
 
 Version
 -------
-0.0.04
+0.1.00
 
 Development ONLY
 ----------------
@@ -17,10 +17,10 @@ Installation
 Applications that use Symfony Flex
 ----------------------------------
 
-Open a command console, enter your project directory and execute:  Flex not yet configured for the project.
+Open a command console, enter your project directory and execute:  A flex recipe for version 0.1.00 has been written, but is currently waiting for testing and approval.
 
 ```console
-$ composer require hillrange/CKEditor
+$ composer require hillrange/ckeditor
 ```
 
 Applications that don't use Symfony Flex
