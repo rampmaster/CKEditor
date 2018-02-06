@@ -1,9 +1,9 @@
 # CKEditor for Symfony 4
-Symfony 4 CKEditor Bundle
+Provides a CKEditor integration for your Symfony4 Project.
 
 Version
 -------
-0.0.02
+0.0.04
 
 Development ONLY
 ----------------
@@ -17,7 +17,7 @@ Installation
 Applications that use Symfony Flex
 ----------------------------------
 
-Open a command console, enter your project directory and execute:
+Open a command console, enter your project directory and execute:  Flex not yet configured for the project.
 
 ```console
 $ composer require hillrange/CKEditor
@@ -32,7 +32,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require hillrange/ckeditor ^0.0
+$ composer require hillrange/ckeditor dev-master
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -45,6 +45,10 @@ Download CKEditor
 Once, you have registered the bundle, you need to install CKEditor:
 ```console
 $ php bin/console ckeditor:install
+```
+and then run 
+```console
+$ composer update
 ```
 
 ### Step 2: Enable the Bundle
