@@ -3,7 +3,7 @@ Provides a CKEditor integration for your Symfony4 Project.
 
 Version
 -------
-0.1.02
+0.1.03
 
 Development ONLY
 ----------------

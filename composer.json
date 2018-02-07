@@ -21,6 +21,7 @@
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
         "symfony/property-access": "^4.0",
+        "symfony/templating": "^4.0",
         "symfony/twig-bridge": "^4.0",
         "symfony/twig-bundle": "^4.0",
         "symfony/validator": "^4.0",
@@ -44,7 +45,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.02-dev"
+            "dev-master": "0.1.03-dev"
         },
         "symfony": {
             "allow-contrib": "true"
