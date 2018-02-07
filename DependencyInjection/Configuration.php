@@ -27,7 +27,7 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = $this->createTreeBuilder();
         $treeBuilder
-            ->root('hillrange_ckeditor')
+            ->root('hillrange_ck_editor')
             ->children()
                 ->booleanNode('enable')->end()
                 ->booleanNode('async')->end()
