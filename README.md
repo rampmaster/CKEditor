@@ -17,7 +17,7 @@ Installation
 Applications that use Symfony Flex
 ----------------------------------
 
-Open a command console, enter your project directory and execute:  A flex recipe for version 0.1.00 has been written, but is currently waiting for testing and approval.
+Open a command console, enter your project directory and execute:  A flex recipe for version 0.1.04 has been written, but is currently waiting for testing and approval.
 
 ```console
 $ composer require hillrange/ckeditor
@@ -68,8 +68,6 @@ return [
 ```
 Features
 --------
-
-ToDo
-----
+Documentation for IvoryCKEditorBundle applies with the exception of installation.  You can follow the Symfony Documentation for [IvoryCKEditorBundle](https://symfony.com/doc/current/bundles/IvoryCKEditorBundle/index.html).
 
 
