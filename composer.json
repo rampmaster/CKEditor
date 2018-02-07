@@ -45,7 +45,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1.03-dev"
+            "dev-master": "0.1.04-dev"
         },
         "symfony": {
             "allow-contrib": "true"
