@@ -13,6 +13,10 @@ env:
         - SYMFONY_DEPRECATIONS_HELPER=strict
         - SYMFONY_VERSION=4.0.*
 
+install: travis/install.sh
+script: travis/script.sh
+after_success: travis/success.sh
+
 matrix:
     include:
         - php: 7.1
