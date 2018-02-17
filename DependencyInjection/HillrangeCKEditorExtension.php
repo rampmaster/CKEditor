@@ -154,7 +154,7 @@ class HillrangeCKEditorExtension extends ConfigurableExtension
     {
         if (!empty($config['plugins'])) {
             $container
-                ->getDefinition('ivory_ck_editor.plugin_manager')
+                ->getDefinition('hillrange_ck_editor.plugin_manager')
                 ->addMethodCall('setPlugins', [$config['plugins']]);
         }
     }
@@ -178,7 +178,7 @@ class HillrangeCKEditorExtension extends ConfigurableExtension
         }
 
         $container
-            ->getDefinition('ivory_ck_editor.styles_set_manager')
+            ->getDefinition('hillrange_ck_editor.styles_set_manager')
             ->addMethodCall('setStylesSets', [$stylesSets]);
     }
 
@@ -190,7 +190,7 @@ class HillrangeCKEditorExtension extends ConfigurableExtension
     {
         if (!empty($config['templates'])) {
             $container
-                ->getDefinition('ivory_ck_editor.template_manager')
+                ->getDefinition('hillrange_ck_editor.template_manager')
                 ->addMethodCall('setTemplates', [$config['templates']]);
         }
     }
