@@ -1,4 +1,7 @@
 /.idea
 /vendor
+/templates
+/config
+/translation
 
 /Resources/public/
