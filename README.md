@@ -17,7 +17,7 @@ Installation
 Applications that use Symfony Flex
 ----------------------------------
 
-Open a command console, enter your project directory and execute:  A flex recipe for version 0.1.04 has been written, but is currently waiting for testing and approval.
+Open a command console, enter your project directory and execute:  A flex recipe for version 0.1.12 has been written and approved.
 
 ```console
 $ composer require hillrange/ckeditor
@@ -32,7 +32,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require hillrange/ckeditor dev-master
+$ composer require hillrange/ckeditor ^0.1
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -48,7 +48,7 @@ $ php bin/console ckeditor:install
 ```
 and then run 
 ```console
-$ composer update
+$ php bin/console asset:install
 ```
 
 ### Step 2: Enable the Bundle
