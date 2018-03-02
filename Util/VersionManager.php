@@ -4,7 +4,7 @@ namespace Hillrange\CKEditor\Util;
 
 class VersionManager
 {
-    const VERSION = '0.1.14';
+    const VERSION = '0.1.15';
 
     /**
      * @return string
