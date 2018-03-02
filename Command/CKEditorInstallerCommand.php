@@ -321,6 +321,8 @@ EOF
     {
         $helper = new QuestionHelper();
 
+        $question = is_array($question) ? reset($question) : $question ;
+
         $result = $helper->ask($input, $output, new ChoiceQuestion(
             $question,
             $choices,
