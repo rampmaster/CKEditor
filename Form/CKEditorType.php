@@ -79,17 +79,17 @@ class CKEditorType extends AbstractType
     /**
      * @var string
      */
-    private $basePath = '../../../../bundles/hillrangeckeditor/';
+    private $basePath = 'bundles/hillrangeckeditor/';
 
     /**
      * @var string
      */
-    private $jsPath = '../../../../bundles/hillrangeckeditor/ckeditor.js';
+    private $jsPath = 'bundles/hillrangeckeditor/ckeditor.js';
 
     /**
      * @var string
      */
-    private $jqueryPath = '../../../../bundles/hillrangeckeditor/adapters/jquery.js';
+    private $jqueryPath = 'bundles/hillrangeckeditor/adapters/jquery.js';
 
     /**
      * @var ConfigManagerInterface

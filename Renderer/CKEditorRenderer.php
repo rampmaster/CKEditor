@@ -35,6 +35,11 @@ class CKEditorRenderer implements CKEditorRendererInterface
     private $jsonBuilder;
 
     /**
+     * @var string
+     */
+    private $pathOffset;
+
+    /**
      * @param ContainerInterface $container
      */
     public function __construct(ContainerInterface $container, JSONBuilder $jsonBuilder)
@@ -292,7 +297,7 @@ class CKEditorRenderer implements CKEditorRendererInterface
         $helper = $this->getAssets();
 
         if ($helper === null) {
-            return $path;
+            return $this->getPathOffset() . $path;
         }
 
         $url = $helper->getUrl($path);
@@ -358,5 +363,34 @@ class CKEditorRenderer implements CKEditorRendererInterface
     private function getRouter()
     {
         return $this->container->get('router');
+    }
+
+    /**
+     * @return string
+     */
+    public function getPathOffset(): string
+    {
+        if (is_null($this->pathOffset)) {
+            $this->setPathOffset('');
+            $x = trim($this->container->get('request_stack')->getCurrentRequest()->server->get('REQUEST_URI'), '/');
+            $x = explode('#', $x);
+            $x = $x[0];
+            $x = explode('?', $x);
+            $x = $x[0];
+            $x = explode('/', $x);
+            foreach ($x as $q)
+                $this->setPathOffset('../' . $this->pathOffset);
+        }
+        return $this->pathOffset;
+    }
+
+    /**
+     * @param string $pathOffset
+     * @return CKEditorRenderer
+     */
+    public function setPathOffset(string $pathOffset): CKEditorRenderer
+    {
+        $this->pathOffset = $pathOffset;
+        return $this;
     }
 }
