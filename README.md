@@ -68,6 +68,7 @@ return [
 ```
 Features
 --------
-Documentation for IvoryCKEditorBundle applies with the exception of installation.  You can follow the Symfony Documentation for [IvoryCKEditorBundle](https://symfony.com/doc/current/bundles/IvoryCKEditorBundle/index.html).
-
+Documentation for IvoryCKEditorBundle applies with the exception of installation.  You can follow 
+the Symfony Documentation for [IvoryCKEditorBundle](https://symfony.com/doc/current/bundles/IvoryCKEditorBundle/index.html), 
+with the exception that installation does not require the use of Docker. This package uses FLEX to install correctly.
 
