@@ -14,8 +14,8 @@ namespace Hillrange\CKEditor\Command;
 
 use Hillrange\CKEditor\Installer\CKEditorInstaller;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\ProcessHelper;
 use Symfony\Component\Console\Helper\ProgressBar;
-use Symfony\Component\Console\Helper\ProgressHelper;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -162,11 +162,7 @@ EOF
             switch ($type) {
                 case CKEditorInstaller::NOTIFY_CLEAR:
                     $result = $this->choice(
-                        [
-                            sprintf('CKEditor is already installed in "%s"...', $data),
-                            '',
-                            'What do you want to do?',
-                        ],
+                        sprintf('CKEditor is already installed in "%s"...  What do you want to do?', $data),
                         $choices = [
                             CKEditorInstaller::CLEAR_DROP => 'Drop the directory & reinstall CKEditor',
                             CKEditorInstaller::CLEAR_KEEP => 'Keep the directory & reinstall CKEditor by overriding files',
@@ -309,7 +305,7 @@ EOF
     }
 
     /**
-     * @param string|string[] $question
+     * @param string $question
      * @param string[]        $choices
      * @param string          $default
      * @param InputInterface  $input
@@ -317,11 +313,9 @@ EOF
      *
      * @return string|null
      */
-    private function choice($question, array $choices, $default, InputInterface $input, OutputInterface $output)
+    private function choice(string $question, array $choices, $default, InputInterface $input, OutputInterface $output): ?string
     {
         $helper = new QuestionHelper();
-
-        $question = is_array($question) ? reset($question) : $question ;
 
         $result = $helper->ask($input, $output, new ChoiceQuestion(
             $question,
@@ -341,7 +335,7 @@ EOF
      */
     private function createProgressBar(OutputInterface $output)
     {
-        return class_exists(ProgressBar::class) ? new ProgressBar($output) : new ProgressHelper();
+        return class_exists(ProgressBar::class) ? new ProgressBar($output) : new ProcessHelper();
     }
 
     /**
