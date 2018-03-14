@@ -320,7 +320,7 @@ EOF
         $result = $helper->ask($input, $output, new ChoiceQuestion(
             $question,
             $choices,
-            $choices[$default]
+            $default
         ));
 
         $output->writeln('');
